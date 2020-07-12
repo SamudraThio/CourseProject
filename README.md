@@ -6,7 +6,7 @@ Paragraph 1 of text.
 Next Paragraph.
  
 ## Headline lower down
-Emphasis *is* **fun**. ~strike through~, _underline_, code view:
+Emphasis *is* **fun**. ~strike through~, code view:
 `Console.WriteLine(“Test”);`
 
 [A link to Google](http://google.com)
