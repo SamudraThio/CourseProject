@@ -16,3 +16,4 @@ Stretch:
 - Allow members to pull and modify their own data which will retain their old data and create a new copy of their modifications
 - Leaders will be able to also input notes for their members
 - Equipment and cards that give status resistances will be automatically added to the status resistance section
+- Accept Screenshots
