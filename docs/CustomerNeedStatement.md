@@ -67,6 +67,7 @@ The features of this project will include:
 - Prayer to Goddesss Tracker (Up to 200)
 	- Max HP
 	- Attack
+	- Magic Attack
 	- Defense
 	- Magic Defense
 	
