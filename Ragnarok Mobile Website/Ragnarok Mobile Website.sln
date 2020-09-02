@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ragnarok Mobile Website", "Ragnarok Mobile Website\Ragnarok Mobile Website.csproj", "{62378EA1-9B9F-4876-AC27-F9570F240352}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62378EA1-9B9F-4876-AC27-F9570F240352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62378EA1-9B9F-4876-AC27-F9570F240352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62378EA1-9B9F-4876-AC27-F9570F240352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62378EA1-9B9F-4876-AC27-F9570F240352}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83893B24-2837-4662-AA0F-6127BA67DE7D}
+	EndGlobalSection
+EndGlobal
