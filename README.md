@@ -1,25 +1,7 @@
-# Headline 1 
-## Headline 2
-### Headline 3
-Paragraph 1 of text.
- 
-Next Paragraph.
- 
-## Headline lower down
-Emphasis *is* **fun**. ~strike through~, code view:
-`Console.WriteLine(“Test”);`
+# Ragnarok Mobile Guild Management Website
+This is a personal project to make a tracker for my guild on Ragnarok Mobile. The intent is to track individual player stats and gear to help leaders optimize growth for guild versus guild competition.
 
-[A link to Google](http://google.com)
- 
-1. This is a first
-2. This is a second
-3. This is a third
+If you are a fellow player, feel free to submit suggestions through issues. 
 
-- an item
-- another item 
-- a third item
-
-| Header | Header 2 |
-|-|-|
-| tag | Data |
-| tag2 | data2 |
+## Contact
+If you want to contact me, my discord username is Rolo#8773
