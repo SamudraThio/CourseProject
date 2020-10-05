@@ -6,7 +6,7 @@ using Ragnarok_Mobile_Website.Models;
 
 namespace Ragnarok_Mobile_Website.Migrations
 {
-    [DbContext(typeof(DataBase))]
+    [DbContext(typeof(Database))]
     partial class DataBaseModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -1,4 +1,30 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const options = {
+    threshold: 0.8,
+};
 
-// Write your JavaScript code.
+const addActiveClass = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
+            // console.log(entry.target);
+            let currentActive = document.querySelector(".desktop-nav a.active");
+
+            if (currentActive) {
+                currentActive.classList.remove("active");
+            }
+
+            let newActive = document.querySelector(
+                `.desktop-nav a[href="#${entry.target.getAttribute("id")}"]`
+            );
+
+            newActive.classList.add("active");
+        }
+    });
+};
+
+const observer = new IntersectionObserver(addActiveClass, options);
+
+const sections = document.querySelectorAll("section");
+
+sections.forEach((section) => {
+    observer.observe(section);
+});
