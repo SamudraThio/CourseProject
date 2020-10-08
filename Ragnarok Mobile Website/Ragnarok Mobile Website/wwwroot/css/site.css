@@ -385,6 +385,11 @@ section h2::after{
     position: relative;
 }
 
+.slide-container img {
+    object-fit: cover;
+    width: 100%;
+}
+
 .slider-prev,
 .slider-next {
     position: absolute;
