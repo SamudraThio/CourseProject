@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Home Page";
 }
 
@@ -13,287 +13,198 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/glider.min.css" />
 </head>
-<body>
-    <div class="wrapper">
-        <nav class="desktop-nav">
-            <div class="logo">
-                <a href="#">
-                    <img src="Content\Images\Logo.jpg" alt="" />
-                </a>
+<body>   
+
+    <!-- End of Desktop Navigation-->
+
+    <header class="hero-container">
+        <div class="left">
+            <p>Welcome to the</p>
+            <h1><span class="guild-management-tracker">Guild Management Tracker</span></h1>
+            <a href="#" class="btn">Get Started</a>
+            <a href="#" class="btn cyan">Learn More</a>
+        </div>
+
+        <div class="right">
+            <img src="~/Content/Images/Hero.jpg" alt="" />
+        </div>
+
+        <img class="hero-bg " src="~/Content/Images/Background.svg" alt="" />
+
+        <div class="polygon-container">
+            <img class="polygon" src="~/Content/Images/Polygon.jpg" alt="" />
+            <img class="polygon2" src="~/Content/Images/Polygon2.jpg" alt="" />
+            <img class="polygon3" src="~/Content/Images/Polygon3.jpg" alt="" />
+        </div>
+    </header>
+
+    <!--End of hero section-->
+
+    <section id="Features" class="brands-section">
+        <h2>Features</h2>
+        <div class="brands-container">
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+        </div>
+    </section>
+    <!--End of features section-->
+
+    <section id="AboutUs" class="about-section">
+        <h2>About Us</h2>
+        <div class="section-content">
+            <div class="about-description">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
+                    rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
+                    feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
+                    et ipsum.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
+                    rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
+                    feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
+                    et ipsum.
+                </p>
+
             </div>
 
-            <ul class="menu-items">
-                <li>
-                    <a href="#Features">Features</a>
-                </li>
+            <img src="~/Content/Images/About.jpg" alt="" />
+        </div>
+    </section>
 
-                <li>
-                    <a href="#AboutUs" class="active">About</a>
-                </li>
+    <!-- End of About Us Section -->
 
-                <li>
-                    <a href="#OurClients">Our Clients</a>
-                </li>
+    <section id="OurClients" class="project-section">
+        <h2>Our Clients</h2>
 
-                <li>
-                    <a href="#Updates">Updates</a>
-                </li>
+        <div class="projects-gallery">
+            <img src="~/Content/Images/Client.jpg" alt="" />
+            <img src="~/Content/Images/Client2.jpg" alt="" />
+            <img src="~/Content/Images/Client3.jpg" alt="" />
+            <img src="~/Content/Images/Client4.jpg" alt="" />
+            <img src="~/Content/Images/Client5.jpg" alt="" />
+            <img src="~/Content/Images/Client6.jpg" alt="" />
+        </div>
 
-                <li>
-                    <a href="#Contact">Contact</a>
-                </li>
-
-                <li>
-                    <a href="#">Log In</a>
-                </li>
-
-                <li>
-                    <a href="#" class="btn">Get Started</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <!-- End of Desktop Navigation-->
-
-        <header class="hero-container">
-            <div class="left">
-                <p>Welcome to the</p>
-                <h1><span class="guild-management-tracker">Guild Management Tracker</span></h1>
-                <a href="#" class="btn">Get Started</a>
-                <a href="#" class="btn cyan">Learn More</a>
-            </div>
-
-            <div class="right">
-                <img src="Content\Images\Hero.jpg" alt="" />
-            </div>
-
-            <img class="hero-bg " src="Content\Images\Background.svg" alt="" />
-
-            <div class="polygon-container">
-                <img class="polygon" src="Content\Images\Polygon.jpg" alt="" />
-                <img class="polygon2" src="Content\Images\Polygon2.jpg" alt="" />
-                <img class="polygon3" src="Content\Images\Polygon3.jpg" alt="" />
-            </div>
-        </header>
-
-        <!--End of hero section-->
-
-        <section id="Features" class="brands-section">
-            <h2>Features</h2>
-            <div class="brands-container">
-                <img src="Content\Images\Feature.jpg" alt="" />
-                <img src="Content\Images\Feature.jpg" alt="" />
-                <img src="Content\Images\Feature.jpg" alt="" />
-                <img src="Content\Images\Feature.jpg" alt="" />
-                <img src="Content\Images\Feature.jpg" alt="" />
-            </div>
-        </section>
-        <!--End of features section-->
-
-        <section id="AboutUs" class="about-section">
-            <h2>About Us</h2>
-            <div class="section-content">
-                <div class="about-description">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                        malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
-                        rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
-                        feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
-                        et ipsum.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                        malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
-                        rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
-                        feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
-                        et ipsum.
-                    </p>
-
-                </div>
-
-                <img src="Content\Images\About.jpg" alt="" />
-            </div>
-        </section>
-
-        <!-- End of About Us Section -->
-
-        <section id="OurClients" class="project-section">
-            <h2>Our Clients</h2>
-
-            <div class="projects-gallery">
-                <img src="Content\Images\Client.jpg" alt="" />
-                <img src="Content\Images\Client2.jpg" alt="" />
-                <img src="Content\Images\Client3.jpg" alt="" />
-                <img src="Content\Images\Client4.jpg" alt="" />
-                <img src="Content\Images\Client5.jpg" alt="" />
-                <img src="Content\Images\Client6.jpg" alt="" />
-            </div>
-
-            <a href="#" class="btn cyan">View All</a>
-        </section>
+        <a href="#" class="btn cyan">View All</a>
+    </section>
 
         <!-- End of Client Section -->
-    </div>
 
     <section id="Updates" class="testimonials-section">
-        <div class="wrapper">
-            <h2>Updates</h2>
+        
+        <h2>Updates</h2>
 
-            <div class="testimonials-container">
-                <div class="testimonials">
-                    <div class="testimonial">
-                        <div class="slide-container">
-                            <div class="content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                                    malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
-                                    rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
-                                    feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
-                                    et ipsum.
-                                </p>
-                                <div class="name">
-                                    <strong>October Update</strong>
-                                </div>
+        <div class="testimonials-container">
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="slide-container">
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
+                                rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
+                                feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
+                                et ipsum.
+                            </p>
+                            <div class="name">
+                                <strong>October Update</strong>
                             </div>
-
-
-                            <img src="Content\Images\Client.jpg" alt="" />
                         </div>
-                    </div>
 
-                    <div class="testimonial">
-                        <div class="slide-container">
-                            <div class="content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                                    malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
-                                    rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
-                                    feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
-                                    et ipsum.
-                                </p>
-                                <div class="name">
-                                    <strong>September Update</strong>
-                                </div>
-                            </div>
 
-                            <img src="Content\Images\Client.jpg" alt="" />
-                        </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <div class="slide-container">
-                            <div class="content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                                    malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
-                                    rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
-                                    feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
-                                    et ipsum.
-                                </p>
-                                <div class="name">
-                                    <strong>August Update</strong>
-                                </div>
-                            </div>
-
-                            <img src="Content\Images\Client.jpg" alt="" />
-                        </div>
+                        <img src="~/Content/Images/Client.jpg" alt="" />
                     </div>
                 </div>
 
-                <span class="slider-prev">
-                    <img src="Content\Images\LeftArrow.svg" alt="" />
-                </span>
+                <div class="testimonial">
+                    <div class="slide-container">
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
+                                rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
+                                feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
+                                et ipsum.
+                            </p>
+                            <div class="name">
+                                <strong>September Update</strong>
+                            </div>
+                        </div>
 
-                <span class="slider-next">
-                    <img src="Content\Images\RightArrow.svg" alt="" />
-                </span>
+                        <img src="~/Content/Images/Client.jpg" alt="" />
+                    </div>
+                </div>
 
-                <div role="tablist" class="dots-container">
-                    <div class="dots"></div>
+                <div class="testimonial">
+                    <div class="slide-container">
+                        <div class="content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                                malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
+                                rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
+                                feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
+                                et ipsum.
+                            </p>
+                            <div class="name">
+                                <strong>August Update</strong>
+                            </div>
+                        </div>
+
+                        <img src="~/Content/Images/Client.jpg" alt="" />
+                    </div>
                 </div>
             </div>
+
+            <span class="slider-prev">
+                <img src="~/Content/Images/LeftArrow.svg" alt="" />
+            </span>
+
+            <span class="slider-next">
+                <img src="~/Content/Images/RightArrow.svg" alt="" />
+            </span>
+
+            <div role="tablist" class="dots-container">
+                <div class="dots"></div>
+            </div>
         </div>
+     
     </section>
 
     <!-- End of Update Section -->
 
-    <div class="wrapper">
-        <section id="Contact" class="contact-section">
-            <h2>Contact Us</h2>
-            <form action="#">
-                <div class="group">
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Email" />
-                </div>
 
-                <div class="group">
-                    <textarea name=""
-                              id=""
-                              cols="30"
-                              rows="10"
-                              placeholder="Your Message"></textarea>
-                </div>
+    <section id="Contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <div class="group">
+                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Email" />
+            </div>
 
-                <a href="#" class="btn cyan">Send Message</a>
-            </form>
-        </section>
-    </div>
+            <div class="group">
+                <textarea name=""
+                          id=""
+                          cols="30"
+                          rows="10"
+                          placeholder="Your Message"></textarea>
+            </div>
+
+            <a href="#" class="btn cyan">Send Message</a>
+        </form>
+    </section>
+ 
 
     <!-- End of Contact Section -->
 
-    <footer>
-        <div class="wrapper">
-            <div class="footer-container">
-                <div class="logo">
-                    <a href="#">
-                        <img src="Content\Images\Logo.jpg" alt="" />
-                    </a>
-                </div>
 
-                <div class="footer-nav">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="#">Member Tracking</a></li>
-                        <li><a href="#">Stat Tracking</a></li>
-                        <li><a href="#">Equipment Tracking</a></li>
-                        <li><a href="#">Data Analysis</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-nav">
-                    <h3>About Us</h3>
-                    <ul>
-                        <li><a href="#">Story</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-nav">
-                    <h3>Get Social</h3>
-                    <div class="footer-social">
-                        <a href="#">
-                            <img src="Content\Images\Discord.jpg" alt="" />
-                        </a>
-                    </div>
-
-                    <p>email@outlook.com</p>
-                </div>
-            </div>
-        </div>
-
-        <p class="copyright">
-            We are not affiliated with Gravity Co. or X.D. Global Ltd. in any way.
-            Ragnarok M: Eternal Love related images and contents are copyrighted by Gravity Co. and X.D. Global Ltd. &copy;2020
-        </p>
-    </footer>
-
-    <!-- End of footer-->
-
-    <script src="js\glider.min.js"></script>
+    <script src="~/js/glider.min.js"></script>
     <script>
         new Glider(document.querySelector(".testimonials"), {
             slidesToShow: 1,
@@ -305,7 +216,7 @@
         })
     </script>
 
-    <script src="js\site.js"></script>
+    <script src="~/js/site.js"></script>
 
 
 </body>

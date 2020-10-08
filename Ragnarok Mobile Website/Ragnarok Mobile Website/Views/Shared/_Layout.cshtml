@@ -1,2 +1,109 @@
-﻿@RenderBody()
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/glider.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="desktop-nav">
+            <div class="logo">
+                <a href="#">
+                    <img src="~/Content/Images/Logo.jpg" alt="" />
+                </a>
+            </div>
+
+            <ul class="menu-items">
+                <li>
+                    <a href="#Features">Features</a>
+                </li>
+
+                <li>
+                    <a href="#AboutUs" class="active">About</a>
+                </li>
+
+                <li>
+                    <a href="#OurClients">Our Clients</a>
+                </li>
+
+                <li>
+                    <a href="#Updates">Updates</a>
+                </li>
+
+                <li>
+                    <a href="#Contact">Contact</a>
+                </li>
+
+                <li>
+                    <a href="#">Log In</a>
+                </li>
+
+                <li>
+                    <a href="#" class="btn">Get Started</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- End of Desktop Navigation-->
+        @RenderBody();
+    </div>
+    </body>
+</html>
+<!-- Start of Footer -->
+
+<footer>
+    <div class="wrapper">
+        <div class="footer-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="~/Content/Images/Logo.jpg" alt="" />
+                </a>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#">Member Tracking</a></li>
+                    <li><a href="#">Stat Tracking</a></li>
+                    <li><a href="#">Equipment Tracking</a></li>
+                    <li><a href="#">Data Analysis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <h3>Get Social</h3>
+                <div class="footer-social">
+                    <a href="#">
+                        <img src="~/Content/Images/Discord.jpg" alt="" />
+                    </a>
+                </div>
+
+                <p>email@outlook.com</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="copyright">
+        We are not affiliated with Gravity Co. or X.D. Global Ltd. in any way.
+        Ragnarok M: Eternal Love related images and contents are copyrighted by Gravity Co. and X.D. Global Ltd. &copy;2020
+    </p>
+</footer>
+
+
+<!-- End of footer-->
 
