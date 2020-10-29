@@ -12,45 +12,50 @@
     <div class="wrapper">
         <nav class="desktop-nav">
             <div class="logo">
-                <a href="#">
+                <a asp-controller="" asp-action="">
                     <img src="~/Content/Images/Logo.jpg" alt="" />
                 </a>
             </div>
 
             <ul class="menu-items">
                 <li>
-                    <a href="#Features">Features</a>
+                    <a asp-controller="" asp-action="" class="active">Home</a>
                 </li>
 
                 <li>
-                    <a href="#AboutUs" class="active">About</a>
+                    <a href="..#AboutUs">About</a>
                 </li>
 
                 <li>
-                    <a href="#OurClients">Our Clients</a>
+                    <a href="..#Features">Features</a>
+                </li>
+
+
+                <li>
+                    <a href="..#OurClients">Our Clients</a>
                 </li>
 
                 <li>
-                    <a href="#Updates">Updates</a>
+                    <a href="..#Updates">Updates</a>
                 </li>
 
                 <li>
-                    <a href="#Contact">Contact</a>
+                    <a href="..#Contact">Contact</a>
                 </li>
 
                 <li>
-                    <a href="#">Log In</a>
+                    <a asp-controller="" asp-action="LogIn">Log In</a>
                 </li>
 
                 <li>
-                    <a href="#" class="btn">Get Started</a>
+                    <a asp-controller="" asp-action="GuildRegistration" class="btn">Guild Registration</a>
                 </li>
             </ul>
 
         </nav>
 
         <!-- End of Desktop Navigation-->
-        @RenderBody();
+        @RenderBody()
     </div>
     </body>
 </html>
@@ -60,7 +65,7 @@
     <div class="wrapper">
         <div class="footer-container">
             <div class="logo">
-                <a href="#">
+                <a asp-controller="">
                     <img src="~/Content/Images/Logo.jpg" alt="" />
                 </a>
             </div>
@@ -88,7 +93,7 @@
             <div class="footer-nav">
                 <h3>Get Social</h3>
                 <div class="footer-social">
-                    <a href="#">
+                    <a href="https://discord.gg/69GfGb">
                         <img src="~/Content/Images/Discord.jpg" alt="" />
                     </a>
                 </div>

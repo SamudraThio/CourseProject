@@ -13,16 +13,13 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/glider.min.css" />
 </head>
-<body>   
-
-    <!-- End of Desktop Navigation-->
-
+<body>
     <header class="hero-container">
         <div class="left">
             <p>Welcome to the</p>
             <h1><span class="guild-management-tracker">Guild Management Tracker</span></h1>
-            <a href="#" class="btn">Get Started</a>
-            <a href="#" class="btn cyan">Learn More</a>
+            <a asp-action="GuildRegistration" class="btn">Guild Registration</a>
+            <a asp-action="CharacterEntry" class="btn cyan">Character Entry</a>
         </div>
 
         <div class="right">
@@ -39,18 +36,6 @@
     </header>
 
     <!--End of hero section-->
-
-    <section id="Features" class="brands-section">
-        <h2>Features</h2>
-        <div class="brands-container">
-            <img src="~/Content/Images/Feature.jpg" alt="" />
-            <img src="~/Content/Images/Feature.jpg" alt="" />
-            <img src="~/Content/Images/Feature.jpg" alt="" />
-            <img src="~/Content/Images/Feature.jpg" alt="" />
-            <img src="~/Content/Images/Feature.jpg" alt="" />
-        </div>
-    </section>
-    <!--End of features section-->
 
     <section id="AboutUs" class="about-section">
         <h2>About Us</h2>
@@ -80,6 +65,19 @@
 
     <!-- End of About Us Section -->
 
+
+    <section id="Features" class="brands-section">
+        <h2>Features</h2>
+        <div class="brands-container">
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+            <img src="~/Content/Images/Feature.jpg" alt="" />
+        </div>
+    </section>
+    <!--End of features section-->
+
     <section id="OurClients" class="project-section">
         <h2>Our Clients</h2>
 
@@ -95,10 +93,10 @@
         <a href="#" class="btn cyan">View All</a>
     </section>
 
-        <!-- End of Client Section -->
+    <!-- End of Client Section -->
 
     <section id="Updates" class="testimonials-section">
-        
+
         <h2>Updates</h2>
 
         <div class="testimonials-container">
@@ -113,9 +111,11 @@
                                 feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
                                 et ipsum.
                             </p>
-                            <div class="name">
-                                <strong>October Update</strong>
-                            </div>
+                            <a asp-controller="" asp-action="Updates">
+                                <div class="name">
+                                    <strong>October Update</strong>
+                                </div>
+                            </a>
                         </div>
 
 
@@ -133,9 +133,11 @@
                                 feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
                                 et ipsum.
                             </p>
-                            <div class="name">
-                                <strong>September Update</strong>
-                            </div>
+                            <a asp-controller="" asp-action="Updates">
+                                <div class="name">
+                                    <strong>September Update</strong>
+                                </div>
+                            </a>
                         </div>
 
                         <img src="~/Content/Images/Update2.jpg" alt="" />
@@ -152,9 +154,11 @@
                                 feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque in
                                 et ipsum.
                             </p>
-                            <div class="name">
-                                <strong>August Update</strong>
-                            </div>
+                            <a asp-controller="" asp-action="Updates">
+                                <div class="name">
+                                    <strong>August Update</strong>
+                                </div>
+                            </a>
                         </div>
 
                         <img src="~/Content/Images/Update3.jpg" alt="" />
@@ -174,7 +178,7 @@
                 <div class="dots"></div>
             </div>
         </div>
-     
+
     </section>
 
     <!-- End of Update Section -->
@@ -182,24 +186,24 @@
 
     <section id="Contact" class="contact-section">
         <h2>Contact Us</h2>
-        <form action="#">
+        <form action="mailto:Samudra.Thio@outlook.com" method="post" enctype="text/plain">
             <div class="group">
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
+                <input type="text" name="name" placeholder="Your Name" />
+                <input type="text" name="email" placeholder="Your Email" />
             </div>
 
             <div class="group">
-                <textarea name=""
+                <textarea name="message"
                           id=""
                           cols="30"
                           rows="10"
                           placeholder="Your Message"></textarea>
             </div>
 
-            <a href="#" class="btn cyan">Send Message</a>
+            <label><a input type="submit" href="mailto:Samudra.Thio@outlook.com" class="btn cyan">Send Message</a></label>
         </form>
     </section>
- 
+
 
     <!-- End of Contact Section -->
 
@@ -212,12 +216,20 @@
             rewind: true,
             arrows: {
                 prev: '.slider-prev',
-                next: '.slider-next',                
+                next: '.slider-next',
             }
         })
     </script>
 
     <script src="~/js/site.js"></script>
+
+    <script language="JavaScript">
+        var frmvalidator = new Validator("contactform");
+        frmvalidator.addValidation("name", "req", "Please provide your name");
+        frmvalidator.addValidation("email", "req", "Please provide your email");
+        frmvalidator.addValidation("email", "email",
+            "Please enter a valid email address");
+    </script>
 
 
 </body>

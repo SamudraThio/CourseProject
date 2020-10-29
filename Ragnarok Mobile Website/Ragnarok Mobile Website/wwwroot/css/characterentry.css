@@ -1,0 +1,70 @@
+﻿.grid {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header"
+        "guild" 
+        "characterstats"
+        "classstats" 
+        "adventurebook"
+        "prayer" 
+        "statusresistance"
+        "equipment";
+}
+
+.grid div:nth-child(even) {
+    background-color: lightcyan
+}
+
+.grid div:nth-child(odd) {
+    background-color: aqua
+}
+
+.header {
+    grid-area: header;
+}
+
+.characterstats {
+    grid-area: characterstats;
+}
+
+.guild {
+    grid-area: guild;
+}
+
+.adventurebook {
+    grid-area: adventurebook;
+}
+
+.classstats {
+    grid-area: classstats;
+    display: grid;
+}
+
+.prayer {
+    grid-area: prayer;
+}
+
+.statusresistance {
+    grid-area: statusresistance;
+}
+
+.equipment {
+    grid-area: equipment;
+}
+
+@media screen and (min-width: 736px)
+{
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header header header header" 
+            "guild characterstats  characterstats classstats" 
+            "adventurebook prayer prayer statusresistance" 
+            "equipment equipment equipment equipment";
+    }
+}

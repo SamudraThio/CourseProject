@@ -36,8 +36,14 @@ namespace Ragnarok_Mobile_Website.Models
 
         public int UserId { get; set; }
         public int GuildId { get; set; }
-        public string Class { get; set; }
         public int Level { get; set; }
+        public string Class { get; set; }
+        public int Strength { get; set; }
+        public int Agility { get; set; }
+        public int Vitality { get; set; }
+        public int Intelligence { get; set; }
+        public int Dexterity { get; set; }
+        public int Luck { get; set; }
         public int HealthPoints { get; set; }
         public int GoldMedals { get; set; }
         public int GuildContribution { get; set; }
@@ -56,6 +62,7 @@ namespace Ragnarok_Mobile_Website.Models
         public int MaximumHp { get; set; }
         public int PhysicalAttack { get; set; }
         public int MagicAttack { get; set; }
+        public int GachaDeposit { get; set; }
     }
     public class ClassStats
     {

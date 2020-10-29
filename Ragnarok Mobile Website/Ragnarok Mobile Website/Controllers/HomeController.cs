@@ -33,7 +33,29 @@ namespace Ragnarok_Mobile_Website.Controllers
             return View();
         }
 
-        public IActionResult LogOn()
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+
+        public IActionResult GuildRegistration()
+        {
+            return View();
+        }
+        public IActionResult LearnMore()
+        {
+            return View();
+        }
+
+        public IActionResult OurClients()
+        {
+            return View();
+        }
+        public IActionResult Updates()
+        {
+            return View();
+        }
+        public IActionResult CharacterEntry()
         {
             return View();
         }

@@ -61,10 +61,10 @@ section p {
     border-radius: 24px;
     padding: 2px 30px;
     padding-right: 0;
+
     position: fixed;
     z-index: 200;
     width: calc(1440px - 200px);
-
     top: 28px;
 }
 
@@ -78,7 +78,7 @@ section p {
 }
 
 .desktop-nav .menu-items li:nth-last-of-type(1){
-    margin-right: 0 20px;
+    margin-right: 15px;
 }
 
 .desktop-nav .menu-items li a {
