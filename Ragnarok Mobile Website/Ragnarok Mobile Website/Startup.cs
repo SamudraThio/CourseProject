@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Ragnarok_Mobile_Website.Data;
 
 namespace Ragnarok_Mobile_Website
 {
@@ -24,6 +26,9 @@ namespace Ragnarok_Mobile_Website
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<PlayerContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PlayerContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
