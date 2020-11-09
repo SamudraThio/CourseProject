@@ -1,0 +1,48 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.AdventureBooks.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdventureBook[0].MaximumHp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdventureBook[0].PhysicalAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdventureBook[0].MagicAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdventureBook[0].GachaDeposit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AdventureBook) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumHp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GachaDeposit)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CharacterId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CharacterId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CharacterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

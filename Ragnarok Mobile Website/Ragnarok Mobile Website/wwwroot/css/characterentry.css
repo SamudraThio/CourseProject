@@ -1,25 +1,78 @@
-﻿.grid {
+﻿/* Colors */
+
+:root {
+    --imperial-red: #E63946;
+    --honeydew: #F1FAEE;
+    --light-blue: A8DADC;
+    --medium-blue: 457B9D;
+    --dark-blue: 1D3557;
+    --dark-color: #2b2d42;
+    --light-color: #fefefe;
+    --red-color: #d80032;
+    --cyan-color: #41ead4;
+    --red-hover-color: #be0732;
+    --cyan-hover-color: #6af3e1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+p {
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+section {
+    padding-top: 100px;
+}
+
+    section p {
+        color: var(--dark-color);
+    }
+
+
+.grid {
     margin-top: 100px;
     display: grid;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 24px;
+    background: var(--light-color);
+    padding: 15px 15px;
+    margin-top: 100px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        "header"
-        "guild" 
-        "characterstats"
-        "classstats" 
-        "adventurebook"
-        "prayer" 
-        "statusresistance"
-        "equipment";
+    grid-template-areas: "header" "guild" "characterstats" "classstats" "adventurebook" "prayer" "statusresistance" "equipment";
 }
 
 .grid div:nth-child(even) {
-    background-color: lightcyan
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    background: var(--light-color);
+    padding: 15px 15px;
+    margin: 2.5px;
 }
 
 .grid div:nth-child(odd) {
-    background-color: aqua
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    background: var(--light-color);
+    padding: 15px 15px;    
+    margin: 2.5px;
+
 }
 
 .header {
@@ -55,16 +108,44 @@
     grid-area: equipment;
 }
 
+.headgear {
+    grid-area: headgear;
+}
+
+
 @media screen and (min-width: 736px)
 {
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
-            "header header header header" 
-            "guild characterstats  characterstats classstats" 
-            "adventurebook prayer prayer statusresistance" 
-            "equipment equipment equipment equipment";
+            "guild characterstats characterstats prayer" 
+            "adventurebook classstats classstats statusresistance" 
+            "equipment equipment headgear headgear";
     }
+}
+
+
+input[type="text"],
+textarea {
+    padding: 1px 1px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    border-radius: 0px;
+    background: white;
+    font-family: "Roboto", sans-serif;
+    flex: 0;
+    margin-bottom: 0px;
+}
+
+.control-label {
+    width: 10px;
+}
+
+.form-control {
+    width: 80px;
+}
+
+.submit {
+    float: right;
 }

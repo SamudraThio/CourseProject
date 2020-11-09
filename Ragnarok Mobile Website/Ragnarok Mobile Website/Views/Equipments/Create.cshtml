@@ -1,0 +1,170 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.Equipments.CreateModel
+
+<h4>Equipment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Equipment.WeaponName" class="control-label"></label>
+                <input asp-for="Equipment.WeaponName" class="form-control" />
+                <span asp-validation-for="Equipment.WeaponName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.WeaponRefine" class="control-label"></label>
+                <input asp-for="Equipment.WeaponRefine" class="form-control" />
+                <span asp-validation-for="Equipment.WeaponRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.WeaponCard1" class="control-label"></label>
+                <input asp-for="Equipment.WeaponCard1" class="form-control" />
+                <span asp-validation-for="Equipment.WeaponCard1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.WeaponCard2" class="control-label"></label>
+                <input asp-for="Equipment.WeaponCard2" class="form-control" />
+                <span asp-validation-for="Equipment.WeaponCard2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ShieldName" class="control-label"></label>
+                <input asp-for="Equipment.ShieldName" class="form-control" />
+                <span asp-validation-for="Equipment.ShieldName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ShieldRefine" class="control-label"></label>
+                <input asp-for="Equipment.ShieldRefine" class="form-control" />
+                <span asp-validation-for="Equipment.ShieldRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ShieldCard" class="control-label"></label>
+                <input asp-for="Equipment.ShieldCard" class="form-control" />
+                <span asp-validation-for="Equipment.ShieldCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ArmorName" class="control-label"></label>
+                <input asp-for="Equipment.ArmorName" class="form-control" />
+                <span asp-validation-for="Equipment.ArmorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ArmorRefine" class="control-label"></label>
+                <input asp-for="Equipment.ArmorRefine" class="form-control" />
+                <span asp-validation-for="Equipment.ArmorRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ArmorCard" class="control-label"></label>
+                <input asp-for="Equipment.ArmorCard" class="form-control" />
+                <span asp-validation-for="Equipment.ArmorCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ManteauName" class="control-label"></label>
+                <input asp-for="Equipment.ManteauName" class="form-control" />
+                <span asp-validation-for="Equipment.ManteauName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ManteauRefine" class="control-label"></label>
+                <input asp-for="Equipment.ManteauRefine" class="form-control" />
+                <span asp-validation-for="Equipment.ManteauRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.ManteauCard" class="control-label"></label>
+                <input asp-for="Equipment.ManteauCard" class="form-control" />
+                <span asp-validation-for="Equipment.ManteauCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.LeftAccessoryName" class="control-label"></label>
+                <input asp-for="Equipment.LeftAccessoryName" class="form-control" />
+                <span asp-validation-for="Equipment.LeftAccessoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.LeftAccessoryRefine" class="control-label"></label>
+                <input asp-for="Equipment.LeftAccessoryRefine" class="form-control" />
+                <span asp-validation-for="Equipment.LeftAccessoryRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.LeftAccessoryCard" class="control-label"></label>
+                <input asp-for="Equipment.LeftAccessoryCard" class="form-control" />
+                <span asp-validation-for="Equipment.LeftAccessoryCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.RightAccessoryName" class="control-label"></label>
+                <input asp-for="Equipment.RightAccessoryName" class="form-control" />
+                <span asp-validation-for="Equipment.RightAccessoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.RightAccessoryRefine" class="control-label"></label>
+                <input asp-for="Equipment.RightAccessoryRefine" class="form-control" />
+                <span asp-validation-for="Equipment.RightAccessoryRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.RightAccessoryCard" class="control-label"></label>
+                <input asp-for="Equipment.RightAccessoryCard" class="form-control" />
+                <span asp-validation-for="Equipment.RightAccessoryCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.HeadgearName" class="control-label"></label>
+                <input asp-for="Equipment.HeadgearName" class="form-control" />
+                <span asp-validation-for="Equipment.HeadgearName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.HeadgearRefine" class="control-label"></label>
+                <input asp-for="Equipment.HeadgearRefine" class="form-control" />
+                <span asp-validation-for="Equipment.HeadgearRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.HeadgearCard" class="control-label"></label>
+                <input asp-for="Equipment.HeadgearCard" class="form-control" />
+                <span asp-validation-for="Equipment.HeadgearCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.FaceName" class="control-label"></label>
+                <input asp-for="Equipment.FaceName" class="form-control" />
+                <span asp-validation-for="Equipment.FaceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.FaceRefine" class="control-label"></label>
+                <input asp-for="Equipment.FaceRefine" class="form-control" />
+                <span asp-validation-for="Equipment.FaceRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.MouthName" class="control-label"></label>
+                <input asp-for="Equipment.MouthName" class="form-control" />
+                <span asp-validation-for="Equipment.MouthName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.MouthRefine" class="control-label"></label>
+                <input asp-for="Equipment.MouthRefine" class="form-control" />
+                <span asp-validation-for="Equipment.MouthRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.BackName" class="control-label"></label>
+                <input asp-for="Equipment.BackName" class="form-control" />
+                <span asp-validation-for="Equipment.BackName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.BackRefine" class="control-label"></label>
+                <input asp-for="Equipment.BackRefine" class="form-control" />
+                <span asp-validation-for="Equipment.BackRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.TailName" class="control-label"></label>
+                <input asp-for="Equipment.TailName" class="form-control" />
+                <span asp-validation-for="Equipment.TailName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.TailRefine" class="control-label"></label>
+                <input asp-for="Equipment.TailRefine" class="form-control" />
+                <span asp-validation-for="Equipment.TailRefine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

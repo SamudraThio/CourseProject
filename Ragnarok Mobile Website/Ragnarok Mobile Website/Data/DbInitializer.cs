@@ -28,7 +28,7 @@ namespace Ragnarok_Mobile_Website.Data
 
             var characterstat = new CharacterStat[]
             {
-                new CharacterStat{CharacterId=0,UserId=0,GuildId=0,Level=160,Class="Genetic",Strength=50,Agility=120,Vitality=159,Intelligence=50,Dexterity=100,Luck=100,HealthPoints=3500000,GoldMedals=2500,GuildContribution=1800000}
+                new CharacterStat{CharacterId=0,UserId=0,GuildId=0,Level=160,JobLevel=80,Class="Genetic",Strength=50,Agility=120,Vitality=159,Intelligence=50,Dexterity=100,Luck=100,HealthPoints=3500000,GoldMedals=2500,GuildContribution=1800000}
             };
 
             context.CharacterStats.AddRange(characterstat);

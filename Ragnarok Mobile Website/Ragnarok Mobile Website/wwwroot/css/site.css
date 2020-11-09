@@ -492,3 +492,13 @@ footer a:hover {
 .copyright {
     text-align: center;
 }
+
+
+/* Character Entry */
+.control-label {
+    width: 10px;
+}
+
+.form-control {
+    width: 80px;
+}

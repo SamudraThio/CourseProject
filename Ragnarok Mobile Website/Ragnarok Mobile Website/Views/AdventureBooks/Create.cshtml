@@ -1,0 +1,40 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.AdventureBooks.CreateModel
+
+<h4>AdventureBook</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AdventureBook.MaximumHp" class="control-label"></label>
+                <input asp-for="AdventureBook.MaximumHp" class="form-control" />
+                <span asp-validation-for="AdventureBook.MaximumHp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdventureBook.PhysicalAttack" class="control-label"></label>
+                <input asp-for="AdventureBook.PhysicalAttack" class="form-control" />
+                <span asp-validation-for="AdventureBook.PhysicalAttack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdventureBook.MagicAttack" class="control-label"></label>
+                <input asp-for="AdventureBook.MagicAttack" class="form-control" />
+                <span asp-validation-for="AdventureBook.MagicAttack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdventureBook.GachaDeposit" class="control-label"></label>
+                <input asp-for="AdventureBook.GachaDeposit" class="form-control" />
+                <span asp-validation-for="AdventureBook.GachaDeposit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,78 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.ClassStats.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].PhysicalAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].MagicAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].PhysicalDefenseIgnore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].MagicDefenseIgnore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].PhysicalPenetration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].MagicPenetration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].HealAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].PhysicalDamageReduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassStat[0].MagicDamageReduction)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ClassStat) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalDefenseIgnore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicDefenseIgnore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalPenetration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicPenetration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HealAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalDamageReduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicDamageReduction)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ClassID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ClassID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ClassID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.StatusResistances.CreateModel
+
+<h4>StatusResistance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StatusResistance.FearResistance" class="control-label"></label>
+                <input asp-for="StatusResistance.FearResistance" class="form-control" />
+                <span asp-validation-for="StatusResistance.FearResistance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusResistance.FreezeResistance" class="control-label"></label>
+                <input asp-for="StatusResistance.FreezeResistance" class="form-control" />
+                <span asp-validation-for="StatusResistance.FreezeResistance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusResistance.PetrifyResistance" class="control-label"></label>
+                <input asp-for="StatusResistance.PetrifyResistance" class="form-control" />
+                <span asp-validation-for="StatusResistance.PetrifyResistance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusResistance.SleepResistance" class="control-label"></label>
+                <input asp-for="StatusResistance.SleepResistance" class="form-control" />
+                <span asp-validation-for="StatusResistance.SleepResistance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusResistance.StunResistance" class="control-label"></label>
+                <input asp-for="StatusResistance.StunResistance" class="form-control" />
+                <span asp-validation-for="StatusResistance.StunResistance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

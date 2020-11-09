@@ -1,0 +1,204 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.Equipments.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].WeaponName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].WeaponRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].WeaponCard1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].WeaponCard2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ShieldName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ShieldRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ShieldCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ArmorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ArmorRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ArmorCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ManteauName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ManteauRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].ManteauCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].LeftAccessoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].LeftAccessoryRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].LeftAccessoryCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].RightAccessoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].RightAccessoryRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].RightAccessoryCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].HeadgearName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].HeadgearRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].HeadgearCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].FaceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].FaceRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].MouthName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].MouthRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].BackName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].BackRefine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].TailName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Equipment[0].TailRefine)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Equipment) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeaponName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeaponRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeaponCard1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeaponCard2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShieldName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShieldRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShieldCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArmorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArmorRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArmorCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManteauName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManteauRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManteauCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeftAccessoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeftAccessoryRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeftAccessoryCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RightAccessoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RightAccessoryRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RightAccessoryCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadgearName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadgearRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeadgearCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaceRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MouthName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MouthRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BackRefine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TailName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TailRefine)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CharacterId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CharacterId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CharacterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

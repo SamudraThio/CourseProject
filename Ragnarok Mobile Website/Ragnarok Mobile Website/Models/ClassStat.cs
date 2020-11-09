@@ -20,6 +20,6 @@ namespace Ragnarok_Mobile_Website.Models
         public int MagicPenetration { get; set; }
         public int HealAmount { get; set; }
         public int PhysicalDamageReduction { get; set; }
-        public int MagicDamageIgnore { get; set; }
+        public int MagicDamageReduction { get; set; }
     }
 }

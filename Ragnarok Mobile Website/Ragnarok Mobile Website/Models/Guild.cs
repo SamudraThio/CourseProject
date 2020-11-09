@@ -12,5 +12,7 @@ namespace Ragnarok_Mobile_Website.Models
         [Key]
         public int GuildId { get; set; }
         public string GuildName { get; set; }
+        public bool Application { get; set; }
+        public bool CharacterUpdate { get; set; }
     }
 }

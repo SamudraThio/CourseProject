@@ -1,0 +1,91 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.CharacterStats.DetailsModel
+
+<div>
+    <h4>CharacterStat</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.UserId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.UserId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.GuildId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.GuildId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Level)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Level)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Class)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Class)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Strength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Strength)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Agility)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Agility)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Vitality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Vitality)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Intelligence)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Intelligence)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Dexterity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Dexterity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.Luck)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.Luck)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.HealthPoints)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.HealthPoints)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.GoldMedals)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.GoldMedals)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CharacterStat.GuildContribution)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CharacterStat.GuildContribution)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CharacterStat.CharacterId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

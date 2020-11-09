@@ -1,0 +1,54 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.GoddessPrayers.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GoddessPrayer[0].MaximumHp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoddessPrayer[0].PhysicalAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoddessPrayer[0].MagicAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoddessPrayer[0].PhysicalDefense)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoddessPrayer[0].MagicalDefense)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.GoddessPrayer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumHp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicAttack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhysicalDefense)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MagicalDefense)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CharacterId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CharacterId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CharacterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

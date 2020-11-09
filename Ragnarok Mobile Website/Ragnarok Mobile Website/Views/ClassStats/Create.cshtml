@@ -1,0 +1,65 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.ClassStats.CreateModel
+
+<h4>ClassStat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ClassStat.PhysicalAttack" class="control-label"></label>
+                <input asp-for="ClassStat.PhysicalAttack" class="form-control" />
+                <span asp-validation-for="ClassStat.PhysicalAttack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.MagicAttack" class="control-label"></label>
+                <input asp-for="ClassStat.MagicAttack" class="form-control" />
+                <span asp-validation-for="ClassStat.MagicAttack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.PhysicalDefenseIgnore" class="control-label"></label>
+                <input asp-for="ClassStat.PhysicalDefenseIgnore" class="form-control" />
+                <span asp-validation-for="ClassStat.PhysicalDefenseIgnore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.MagicDefenseIgnore" class="control-label"></label>
+                <input asp-for="ClassStat.MagicDefenseIgnore" class="form-control" />
+                <span asp-validation-for="ClassStat.MagicDefenseIgnore" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.PhysicalPenetration" class="control-label"></label>
+                <input asp-for="ClassStat.PhysicalPenetration" class="form-control" />
+                <span asp-validation-for="ClassStat.PhysicalPenetration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.MagicPenetration" class="control-label"></label>
+                <input asp-for="ClassStat.MagicPenetration" class="form-control" />
+                <span asp-validation-for="ClassStat.MagicPenetration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.HealAmount" class="control-label"></label>
+                <input asp-for="ClassStat.HealAmount" class="form-control" />
+                <span asp-validation-for="ClassStat.HealAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.PhysicalDamageReduction" class="control-label"></label>
+                <input asp-for="ClassStat.PhysicalDamageReduction" class="form-control" />
+                <span asp-validation-for="ClassStat.PhysicalDamageReduction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassStat.MagicDamageReduction" class="control-label"></label>
+                <input asp-for="ClassStat.MagicDamageReduction" class="form-control" />
+                <span asp-validation-for="ClassStat.MagicDamageReduction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

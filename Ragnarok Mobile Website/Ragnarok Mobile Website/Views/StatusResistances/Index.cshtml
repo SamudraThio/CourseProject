@@ -1,0 +1,54 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.StatusResistances.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusResistance[0].FearResistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusResistance[0].FreezeResistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusResistance[0].PetrifyResistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusResistance[0].SleepResistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatusResistance[0].StunResistance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.StatusResistance) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FearResistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreezeResistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PetrifyResistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SleepResistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StunResistance)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CharacterId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CharacterId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CharacterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

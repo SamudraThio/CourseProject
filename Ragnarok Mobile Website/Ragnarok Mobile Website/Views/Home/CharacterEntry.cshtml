@@ -2,6 +2,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Character Entry";
 }
+@model Ragnarok_Mobile_Website.Views.UserInfos.CreateModel
 
 <!DOCTYPE>
 <html lang="en">
@@ -10,23 +11,474 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/css/site.css" />
+    
     <link rel="stylesheet" href="~/css/characterentry.css" />
 </head>
 <body>
-    <div class="grid">
-        <div class="header">header</div>
+    <form method="post">
+        <div class="grid">
 
-        <div class="characterstats">Character Stats</div>
-        <div class="guild">Guild</div>
-        <div class="adventurebook">Adventure Book</div>
-        <div class="classstats">
-            <p>Class Stats</p>
-            <p>B</p>
+
+            <div class="guild">
+                <table class="guildTable">
+                    <tr class="characterentryHeading">Guild</tr>
+                    <tr>
+                        <td>Guild Name</td>
+                        <td>
+                            <input asp-for="Guild.GuildName" class="form-control" />
+                            <span asp-validation-for="Guild.GuildName" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Application?</td>
+                        <td>
+                            <input asp-for="Guild.Application" class="form-control" />
+                            <span asp-validation-for="Guild.Application" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Character Update?</td>
+                        <td>
+                            <input asp-for="Guild.CharacterUpdate" class="form-control" />
+                            <span asp-validation-for="Guild.CharacterUpdate" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="characterstats">
+                <table class="characterstatsTable">
+                    <tr class="characterentryHeading">Character Stats</tr>
+                    <tr>
+                        <td class="characterstatTableR1">Level</td>
+                        <td>
+                            <input asp-for="CharacterStat.Level" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Level" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">Job Level</td>
+                        <td>
+                            <input asp-for="CharacterStat.JobLevel" class="form-control" />
+                            <span asp-validation-for="CharacterStat.JobLevel" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">Class</td>
+                        <td>
+                            <input asp-for="CharacterStat.Class" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Class" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="characterstatTableLabel">HP</td>
+                        <td>
+                            <input asp-for="CharacterStat.HealthPoints" class="form-control" />
+                            <span asp-validation-for="CharacterStat.HealthPoints" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">Gold Medals</td>
+                        <td>
+                            <input asp-for="CharacterStat.GoldMedals" class="form-control" />
+                            <span asp-validation-for="CharacterStat.GoldMedals" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">Guild Contributions</td>
+                        <td>
+                            <input asp-for="CharacterStat.GuildContribution" class="form-control" />
+                            <span asp-validation-for="CharacterStat.GuildContribution" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="characterstatTableLabel">STR</td>
+                        <td>
+                            <input asp-for="CharacterStat.Strength" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Strength" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">AGI</td>
+                        <td>
+                            <input asp-for="CharacterStat.Agility" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Agility" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">VIT</td>
+                        <td>
+                            <input asp-for="CharacterStat.Vitality" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Vitality" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="characterstatTableLabel">INT</td>
+                        <td>
+                            <input asp-for="CharacterStat.Intelligence" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Intelligence" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">DEX</td>
+                        <td>
+                            <input asp-for="CharacterStat.Dexterity" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Dexterity" class="text-danger"></span>
+                        </td>
+                        <td class="characterstatTableLabel">LUK</td>
+                        <td>
+                            <input asp-for="CharacterStat.Luck" class="form-control" />
+                            <span asp-validation-for="CharacterStat.Luck" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="classstats">
+                <table class="classstatsTable">
+                    <tr class="characterentryHeading">Role-Specific Stats</tr>
+                    <tr>
+                        <td class="classstatTableLabel">Raw ATK</td>
+                        <td>
+                            <input asp-for="ClassStat.PhysicalAttack" class="form-control" />
+                            <span asp-validation-for="ClassStat.PhysicalAttack" class="text-danger"></span>
+                        </td>
+                        <td class="classstatTableLabel">Raw MATK</td>
+                        <td>
+                            <input asp-for="ClassStat.MagicAttack" class="form-control" />
+                            <span asp-validation-for="ClassStat.MagicAttack" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="classstatTableLabel">Phy Def Ign</td>
+                        <td>
+                            <input asp-for="ClassStat.PhysicalDefenseIgnore" class="form-control" />
+                            <span asp-validation-for="ClassStat.PhysicalDefenseIgnore" class="text-danger"></span>
+                        </td>
+                        <td class="classstatTableLabel">Mag Def Ign</td>
+                        <td>
+                            <input asp-for="ClassStat.MagicDefenseIgnore" class="form-control" />
+                            <span asp-validation-for="ClassStat.MagicDefenseIgnore" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="classstatTableLabel">Phy Pene</td>
+                        <td>
+                            <input asp-for="ClassStat.PhysicalPenetration" class="form-control" />
+                            <span asp-validation-for="ClassStat.PhysicalPenetration" class="text-danger"></span>
+                        </td>
+                        <td class="classstatTableLabel">Mag Pene</td>
+                        <td>
+                            <input asp-for="ClassStat.MagicPenetration" class="form-control" />
+                            <span asp-validation-for="ClassStat.MagicPenetration" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="classstatTableLabel">Phy Dmg Red</td>
+                        <td>
+                            <input asp-for="ClassStat.PhysicalDamageReduction" class="form-control" />
+                            <span asp-validation-for="ClassStat.PhysicalDamageReduction" class="text-danger"></span>
+                        </td>
+                        <td class="classstatTableLabel">Mag Dmg Red</td>
+                        <td>
+                            <input asp-for="ClassStat.MagicDamageReduction" class="form-control" />
+                            <span asp-validation-for="ClassStat.MagicDamageReduction" class="text-danger"></span>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+            <div class="adventurebook">
+                <table class="adventurebookTable">
+                    <tr class="characterentryHeading">Adventure Book</tr>
+                    <tr>
+                        <td>HP</td>
+                        <td>
+                            <input asp-for="AdventureBook.MaximumHp" class="form-control" />
+                            <span asp-validation-for="AdventureBook.MaximumHp" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phy Atk</td>
+                        <td>
+                            <input asp-for="AdventureBook.PhysicalAttack" class="form-control" />
+                            <span asp-validation-for="AdventureBook.PhysicalAttack" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mag Atk</td>
+                        <td>
+                            <input asp-for="AdventureBook.MagicAttack" class="form-control" />
+                            <span asp-validation-for="AdventureBook.MagicAttack" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gacha Deposit %</td>
+                        <td>
+                            <input asp-for="AdventureBook.GachaDeposit" class="form-control" />
+                            <span asp-validation-for="AdventureBook.GachaDeposit" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="prayer">
+                <table class="prayerTable">
+                    <tr class="characterentryHeading">Goddess Prayer</tr>
+                    <tr>
+                        <td>HP</td>
+                        <td>
+                            <input asp-for="GoddessPrayer.MaximumHp" class="form-control" />
+                            <span asp-validation-for="GoddessPrayer.MaximumHp" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Atk</td>
+                        <td>
+                            <input asp-for="GoddessPrayer.PhysicalAttack" class="form-control" />
+                            <span asp-validation-for="GoddessPrayer.PhysicalAttack" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MATK</td>
+                        <td>
+                            <input asp-for="GoddessPrayer.MagicAttack" class="form-control" />
+                            <span asp-validation-for="GoddessPrayer.MagicAttack" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phy Def</td>
+                        <td>
+                            <input asp-for="GoddessPrayer.PhysicalDefense" class="form-control" />
+                            <span asp-validation-for="GoddessPrayer.PhysicalDefense" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mag Def</td>
+                        <td>
+                            <input asp-for="GoddessPrayer.MagicalDefense" class="form-control" />
+                            <span asp-validation-for="GoddessPrayer.MagicalDefense" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="statusresistance">
+                <table class="statusresustanceTable">
+                    <tr class="characterentryHeading">Status Resistance</tr>
+                    <tr>
+                        <td>Fear Resist</td>
+                        <td>
+                            <input asp-for="StatusResistance.FearResistance" class="form-control" />
+                            <span asp-validation-for="StatusResistance.FearResistance" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Freeze Resist</td>
+                        <td>
+                            <input asp-for="StatusResistance.FreezeResistance" class="form-control" />
+                            <span asp-validation-for="StatusResistance.FreezeResistance" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Petrify Resist</td>
+                        <td>
+                            <input asp-for="StatusResistance.PetrifyResistance" class="form-control" />
+                            <span asp-validation-for="StatusResistance.PetrifyResistance" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sleep Resist</td>
+                        <td>
+                            <input asp-for="StatusResistance.SleepResistance" class="form-control" />
+                            <span asp-validation-for="StatusResistance.SleepResistance" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Stun Resist</td>
+                        <td>
+                            <input asp-for="StatusResistance.StunResistance" class="form-control" />
+                            <span asp-validation-for="StatusResistance.StunResistance" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="equipment">
+                <table class="equipmentTable">
+                    <tr class="characterentryHeading">Equipment</tr>
+                    <tr>
+                        <td>Weapon</td>
+                        <td>
+                            <input asp-for="Equipment.WeaponName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.WeaponName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.WeaponRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.WeaponRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.WeaponCard1" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.WeaponCard1" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.WeaponCard2" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.WeaponCard2" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Shield</td>
+                        <td>
+                            <input asp-for="Equipment.ShieldName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ShieldName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.ShieldRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ShieldRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.ShieldCard" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ShieldCard" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Armor</td>
+                        <td>
+                            <input asp-for="Equipment.ArmorName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ArmorName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.ArmorRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ArmorRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.ArmorCard" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ArmorCard" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Manteau</td>
+                        <td>
+                            <input asp-for="Equipment.ManteauName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ManteauName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.ManteauRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ManteauRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.ManteauCard" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ManteauCard" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Accessory</td>
+                        <td>
+                            <input asp-for="Equipment.LeftAccessoryName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.LeftAccessoryName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.LeftAccessoryRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.LeftAccessoryRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.LeftAccessoryCard" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.LeftAccessoryCard" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Accessory</td>
+                        <td>
+                            <input asp-for="Equipment.RightAccessoryName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.RightAccessoryName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.RightAccessoryRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.RightAccessoryRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card</td>
+                        <td>
+                            <input asp-for="Equipment.RightAccessoryCard" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.RightAccessoryCard" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="headgear">
+                <table class="headgearTable">
+                    <tr class="characterentryHeading">Headgear</tr>
+                    <tr>
+                        <td>Headgear</td>
+                        <td>
+                            <input asp-for="Equipment.HeadgearName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.HeadgearName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.HeadgearRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.HeadgearRefine" class="text-danger"></span>
+                        </td>
+                        <td>Card 1</td>
+                        <td>
+                            <input asp-for="Equipment.HeadgearCard" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.HeadgearCard" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Face</td>
+                        <td>
+                            <input asp-for="Equipment.FaceName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.FaceName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.FaceRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.FaceRefine" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mouth</td>
+                        <td>
+                            <input asp-for="Equipment.MouthName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.MouthName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.ManteauRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.ManteauRefine" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Back</td>
+                        <td>
+                            <input asp-for="Equipment.BackName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.BackName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.BackRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.BackRefine" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tail</td>
+                        <td>
+                            <input asp-for="Equipment.TailName" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.TailName" class="text-danger"></span>
+                        </td>
+                        <td>Refine</td>
+                        <td>
+                            <input asp-for="Equipment.TailRefine" size="100" class="form-control" />
+                            <span asp-validation-for="Equipment.TailRefine" class="text-danger"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+             <input type="submit" value="Submit" class="submit"/>
         </div>
-        <div class="prayer">Prayer</div>
-        <div class="statusresistance">Status Resistance</div>
-        <div class="equipment">Equipment</div>
-    </div>
+</form>
 </body>
 </html>

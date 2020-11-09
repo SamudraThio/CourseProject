@@ -1,0 +1,42 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.UserInfos.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserInfo[0].UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserInfo[0].Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserInfo[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.UserInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.UserID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.UserID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.UserID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

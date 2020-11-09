@@ -14,7 +14,9 @@ namespace Ragnarok_Mobile_Website.Models
 
         public int UserId { get; set; }
         public int GuildId { get; set; }
+        
         public int Level { get; set; }
+        public int JobLevel { get; set; }
         public string Class { get; set; }
         public int Strength { get; set; }
         public int Agility { get; set; }

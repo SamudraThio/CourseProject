@@ -1,0 +1,102 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.CharacterStats.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].GuildId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Strength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Agility)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Vitality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Intelligence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Dexterity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].Luck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].HealthPoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].GoldMedals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CharacterStat[0].GuildContribution)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CharacterStat) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuildId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agility)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vitality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Intelligence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dexterity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Luck)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HealthPoints)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoldMedals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuildContribution)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CharacterId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CharacterId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CharacterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

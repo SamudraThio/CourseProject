@@ -1,0 +1,70 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.ClassStats.DeleteModel
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ClassStat</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.PhysicalAttack)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.PhysicalAttack)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.MagicAttack)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.MagicAttack)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.PhysicalDefenseIgnore)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.PhysicalDefenseIgnore)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.MagicDefenseIgnore)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.MagicDefenseIgnore)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.PhysicalPenetration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.PhysicalPenetration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.MagicPenetration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.MagicPenetration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.HealAmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.HealAmount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.PhysicalDamageReduction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.PhysicalDamageReduction)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassStat.MagicDamageReduction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassStat.MagicDamageReduction)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ClassStat.ClassID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

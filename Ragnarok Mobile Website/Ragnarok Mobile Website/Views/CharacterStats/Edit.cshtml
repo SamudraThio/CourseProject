@@ -1,0 +1,86 @@
+﻿@page
+@model Ragnarok_Mobile_Website.Views.CharacterStats.EditModel
+
+<h4>CharacterStat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CharacterStat.CharacterId" />
+            <div class="form-group">
+                <label asp-for="CharacterStat.UserId" class="control-label"></label>
+                <input asp-for="CharacterStat.UserId" class="form-control" />
+                <span asp-validation-for="CharacterStat.UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.GuildId" class="control-label"></label>
+                <input asp-for="CharacterStat.GuildId" class="form-control" />
+                <span asp-validation-for="CharacterStat.GuildId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Level" class="control-label"></label>
+                <input asp-for="CharacterStat.Level" class="form-control" />
+                <span asp-validation-for="CharacterStat.Level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Class" class="control-label"></label>
+                <input asp-for="CharacterStat.Class" class="form-control" />
+                <span asp-validation-for="CharacterStat.Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Strength" class="control-label"></label>
+                <input asp-for="CharacterStat.Strength" class="form-control" />
+                <span asp-validation-for="CharacterStat.Strength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Agility" class="control-label"></label>
+                <input asp-for="CharacterStat.Agility" class="form-control" />
+                <span asp-validation-for="CharacterStat.Agility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Vitality" class="control-label"></label>
+                <input asp-for="CharacterStat.Vitality" class="form-control" />
+                <span asp-validation-for="CharacterStat.Vitality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Intelligence" class="control-label"></label>
+                <input asp-for="CharacterStat.Intelligence" class="form-control" />
+                <span asp-validation-for="CharacterStat.Intelligence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Dexterity" class="control-label"></label>
+                <input asp-for="CharacterStat.Dexterity" class="form-control" />
+                <span asp-validation-for="CharacterStat.Dexterity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.Luck" class="control-label"></label>
+                <input asp-for="CharacterStat.Luck" class="form-control" />
+                <span asp-validation-for="CharacterStat.Luck" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.HealthPoints" class="control-label"></label>
+                <input asp-for="CharacterStat.HealthPoints" class="form-control" />
+                <span asp-validation-for="CharacterStat.HealthPoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.GoldMedals" class="control-label"></label>
+                <input asp-for="CharacterStat.GoldMedals" class="form-control" />
+                <span asp-validation-for="CharacterStat.GoldMedals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterStat.GuildContribution" class="control-label"></label>
+                <input asp-for="CharacterStat.GuildContribution" class="form-control" />
+                <span asp-validation-for="CharacterStat.GuildContribution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
