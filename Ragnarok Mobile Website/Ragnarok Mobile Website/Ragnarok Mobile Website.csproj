@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\UserInfo\" />
     <Folder Include="wwwroot\Content\Images\" />
   </ItemGroup>
 

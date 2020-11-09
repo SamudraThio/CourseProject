@@ -14,7 +14,8 @@ namespace Ragnarok_Mobile_Website.Models
 
         public string WeaponName { get; set; }
         public int WeaponRefine { get; set; }
-        public string WeaponCard { get; set; }
+        public string WeaponCard1 { get; set; }
+        public string WeaponCard2 { get; set; }
 
         public string ShieldName { get; set; }
         public int ShieldRefine { get; set; }

@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Ragnarok_Mobile_Website.Models
 {
-    public class CharacterStats
+    public class CharacterStat
     {
         [Key]
         public int CharacterId { get; set; }

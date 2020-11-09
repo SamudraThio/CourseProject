@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Ragnarok_Mobile_Website.Models
 {
-    public class ClassStats
+    public class ClassStat
     {
         [Key]
-        public int ClassId { get; set; }
+        public int ClassID { get; set; }
 
         public int PhysicalAttack { get; set; }
         public int MagicAttack { get; set; }
