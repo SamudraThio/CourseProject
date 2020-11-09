@@ -13,7 +13,7 @@ const addActiveClass = (entries, observer) => {
             }
 
             let newActive = document.querySelector(
-                `.desktop-nav a[href="#${entry.target.getAttribute("id")}"]`
+                `.desktop-nav a[href="..#${entry.target.getAttribute("id")}"]`
             );
 
             newActive.classList.add("active");
